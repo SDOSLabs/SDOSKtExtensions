@@ -4,8 +4,10 @@ import org.junit.Test
 
 import org.junit.Assert.*
 
-
 class LongUnitTest {
+    private data class TestObject(val title: String,
+                                  val price: Long)
+
     @Test
     fun toBoolean_isCorrect() {
         assertEquals(1L.toBoolean(), true)
@@ -29,7 +31,13 @@ class LongUnitTest {
 
     @Test
     fun sumByLong_isCorrect() {
+        val itemsList = mutableListOf<TestObject>()
+        for (index in 0..10) {
+            itemsList.add(TestObject("Item $index", index.toLong()))
+        }
         val longList = mutableListOf(2L, 5L, 10L)
         assertEquals(longList.sumByLong { it * 10 }, 170)
+        assertEquals(itemsList.sumByLong { it.price * 10 }, 550)
     }
+
 }
