@@ -5,7 +5,7 @@ apply plugin: 'com.github.dcendents.android-maven'
 def ktExtensionsVersion = "1.0.0"
 
 ext {
-    publishedGroupId = 'es.sdos.ktextensions'
+    publishedGroupId = 'es.sdos.library.ktextensions'
     libraryName = ktExtensionsVersion
     artifact = 'ktextensions'
     libraryDescription = ''
