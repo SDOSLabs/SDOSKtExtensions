@@ -3,6 +3,10 @@ package es.sdos.library.ktextensions
 import kotlin.math.pow
 import kotlin.math.roundToInt
 
+/**
+ * * 0 to 5 -> +0 to last decimal
+ * * 6 to 9 -> +1 to last decimal
+ */
 fun Float.round(numDecimals: Int = 2): Float {
     val powValue = 10.0.pow(numDecimals)
     return if (powValue > Float.MAX_VALUE ||
