@@ -8,6 +8,6 @@ fun Logger.warning(text: String, exception: Exception) {
     this.log(Level.WARNING, text, exception)
 }
 
-fun Logger.info(text: String, objectToLog: Any) {
+fun Logger.info(text: String, objectToLog: Any?) {
     this.info("$text: $objectToLog")
 }
