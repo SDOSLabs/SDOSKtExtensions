@@ -15,6 +15,7 @@ class FloatUnitTest {
     private val numberWithFiveDecimalsRoundToFourDecimals = 100.5444F
     private val numberWithThreeDecimalsAndLastDecimalIsFive = 100.545F
     private val numberWithThreeDecimalsAndLastDecimalIsFiveRoundToTwoDecimals = 100.54F
+    private val numberMaxFloat = Float.MAX_VALUE
     //endregion
 
     //region round
@@ -22,8 +23,16 @@ class FloatUnitTest {
     fun round_valuesWithDecimals_shouldReturnSuccess() {
         assertEquals(numberWithFourDecimals.round(2),
             numberWithFourDecimalsRoundToTwoDecimals)
+        assertEquals(numberWithFourDecimals.round(),
+            numberWithFourDecimalsRoundToTwoDecimals)
         assertEquals(numberWithFiveDecimals.round(4),
             numberWithFiveDecimalsRoundToFourDecimals)
+    }
+
+    @Test
+    fun round_valueMaxFloat_shouldReturnSameNumber() {
+        assertEquals(numberMaxFloat.round(2),
+            numberMaxFloat)
     }
 
     @Test
