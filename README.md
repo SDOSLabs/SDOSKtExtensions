@@ -5,7 +5,7 @@ Librería de extensiones puras de Kotlin.
 ## 1.- Dependencia
 
 ```xml
-implementation 'es.sdos.android:ktextensions:1.0.0'
+implementation 'es.sdos.android:sdosktextensions:1.0.0'
 ```
 
 ## 2.- Métodos
